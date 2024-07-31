@@ -119,6 +119,7 @@ class usbDelegate: USBWatcherDelegate {
     
     private func isMatching(_ device: io_object_t) -> Bool {
         let name = device.name() ?? "{unknown}"
+        print(name, _name)
         return name == _name
     }
     
